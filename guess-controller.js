@@ -10,8 +10,8 @@ class GuessController {
       return `Correct ${number}`;
     }
 
-    const feedback = this.#guessGame.isGreaterThan(number) ? "Lesser" : "Greater";
-    return `${feedback} ${number}`;
+    const isGreater = this.#guessGame.isGreater(number);
+    return { isGreater };
   }
 
   isGameOver() {

@@ -16,12 +16,12 @@ class GuessGame {
     this.#chances -= 1;
     const result = this.#randomNumber === number;
     this.#updateStatus(result);
-    
+
     return result;
   }
 
-  isGreaterThan(number) {
-    return number < this.#randomNumber;
+  isGreater(number) {
+    return number > this.#randomNumber;
   }
 
   get status() {
